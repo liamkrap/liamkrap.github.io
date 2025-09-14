@@ -9,18 +9,18 @@
 <body>
     <!--This is the header of the page.-->
     <header>
-        <h1>Home</h1>
+        <h1>HOME</h1>
     </header>
 
-    <!--This is the navigation section of the page.-->
+    <!--This is the navigation bar of the page.-->
     <nav>
         <div class="container">
             <ul>
+                <!--The active class shows which page of the navigation the user is currently on.-->
                 <li><a class="active" href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact Me</a></li>
                 <li><a href="projects.html">Projects</a></li>
-                <li><a href="worksamples.html">Work Samples</a></li>
                 <li><a href="teaching.html">Teaching Practice</a></li>
                 <li><a href="resources.html">Resources</a></li>
                 <li><a href="resume.html">Resume</a></li>
@@ -28,33 +28,20 @@
         </div>
     </nav>
     
-    <!--This is the main content section of my page, inclusive of a graphic.-->
+    <!--This is the main content section of my page.-->
     <main>
-        <section>
-            <div class=""profile-photo">
-                <img src="Images/Portrait.png" alt="A portrait photo of Liam Karp">
-            </div>
-        </section>
-        
-        <!--This is an outline of my professional summary and professional journey-->
-        <section>
-            <h2>Professional Summary</h2>
-            <ul>
-                <li>Bachelor of Education (Secondary) and Bachelor of Arts (Design Innovations and Technologies), expected graduation 2026 at <a href="https://www.acu.edu.au/" target="_blank">ACU.</a></li>
-                <li>Waitara BASC Supervisor</li>
-            </ul>
-        </section>
+        <section class="section">
+            <!--The use of an article divides the section in two, to have the text on one side and the image on the other.-->
+            <article class="home">
+                <div class="home-text">
+                    <h2>Welcome to my Teaching Portfolio</h2>
+                    <p>This portfolio showcases my journey and experiences as an aspiring Technology and Applied Studies (TAS) teacher. It highlights my educational background, teaching philosophy, practicum experiences, and the resources I've developed. Through this portfolio, I aim to demonstrate my commitment to fostering creativity, critical thinking, and practical skills in students, preparing them for the challenges of the modern world.</p>
+                </div>
 
-        <section>
-            <h2>Professional Journey</h2>
-                <ul>
-                    <li>Completed Year 12</li>
-                    <li>Worked for Waitara BASC</li>
-                    <li>Began BEDBAD Degree</li>
-                    <li>Became Supervisor at HR at Waitara BASC</li>
-                    <li>Completed 3 Placements</li>
-                    <li>Worked as Workshop Assistant at St Leo's College</li>
-                </ul>
+                <div class="home-photo">
+                    <img src="Images/Portrait.png" alt="A portrait photo of Liam Karp">
+                </div>
+            </article>
         </section>
     </main>
 
@@ -62,7 +49,7 @@
     <footer>
         <div class="container">
             <p>&copy; 2025 Liam Karp. All rights reserved.</p>
-            <p>Last updated: August 2025</p>
+            <p>Last updated: September 2025</p>
     </footer>
 </body>
 </html>

@@ -26,17 +26,17 @@ img {
 
 /* ---------- 2) Core Theme Tokens ----------- */
 :root {
-  --brand: #1c4c96;        /* primary colour */
-  --brand-2: #f39c12;      /* accent colour */
-  --bg: #ffffff;           /* page background */
-  --head: #0FDE4B;         /* main header colour */
-  --text: #222222;         /* default text */
-  --muted: #666666;        /* secondary text */
-  --surface: #f6f8fb;      /* card/section bg */
-  --radius: 12px;          /* rounded corners */
+  --brand: #355b3c;                         /* primary colour */
+  --brand-2: #f39c12;                       /* accent colour */
+  --bg: #ffffff;                            /* page background */
+  --head: #355b3c;                          /* main header colour */
+  --text: #222222;                          /* default text */
+  --muted: #666666;                         /* secondary text */
+  --surface: #eeeeee;                       /* card/section bg */
+  --radius: 12px;                             /* rounded corners */
   --shadow: 0 4px 12px rgba(0,0,0,0.08);    /* Subtle shadow for depth */
-  --spacing: 16px;         /* base spacing unit */
-  --maxw: 1100px;          /* content width */
+  --spacing: 16px;                            /* base spacing unit */
+  --maxw: 1100px;                             /* content width */
   --font-body: "Bebas", "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;  /* Body font */
   --font-head: "Bebas", "Outfit", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;   /* Headings font */
 }
@@ -84,11 +84,15 @@ a:hover, a:focus {
 
 /* ---------- 6) Header / Nav ---------------- */
 header {
-  background: linear-gradient(0deg, #0f3460, #1c4c96);  /* Gradient background */
-  color: white;                                           /* White text */
-  padding: 18px 0;                                          /* Vertical spacing */
-  box-shadow: var(--shadow);                                /* Subtle shadow for depth */
-  margin-bottom: 0;                                         /* Removes gap under header */
+  background-image: url(Images/headerImage.png);           /* Background image that is mainly light green*/
+  background-repeat: no-repeat;                            /* Prevents image from repeating */      
+  background-position: top left;                           /* Positions image at the top left */    
+  background-size: cover;                                  /* Ensures image covers entire header area */ 
+  color:white;                                           /* White text */
+  padding: 1px 0;                                          /* Vertical spacing */
+  box-shadow: var(--shadow);                               /* Subtle shadow for depth */
+  margin-bottom: 0;                                        /* Removes gap under header */
+  font-size: 30px;                                         /* Larger text size for header */     
 }
 header .container {
   width: min(100% - 2*var(--spacing), var(--maxw));   /* Responsive width */
@@ -113,9 +117,9 @@ nav {
 nav .container {
   width: min(100% - 2*var(--spacing), var(--maxw));   /* Responsive container width */
   margin: 0 auto;                                     /* Centers content horizontally */
-  display: flex;                        /* Layout: brand/left + links/right (if needed) */
-  align-items: center;                  /* Centers nav items */
-  justify-content: space-between;       /* Distribute items on the main axis with equal gaps between them; first/last items flush to container edges */
+  display: flex;                                      /* Layout: brand/left + links/right (if needed) */
+  align-items: center;                                /* Centers nav items */
+  justify-content: space-between;                     /* Distribute items on the main axis with equal gaps between them; first/last items flush to container edges */
 }
 nav ul {
   list-style: none;   /* Removes bullets */
@@ -125,11 +129,11 @@ nav ul {
   padding: 0;         /* Removes padding */
 }
 nav a {
-  display: block;         /* Larger click target */
-  color: white;         /* White link text */
-  text-decoration: none;  /* Remove underline/other decorations from text/links */
-  padding: 14px 16px;      /* Space inside link area */
-  border-radius: 8px;     /* Slightly rounded corners */
+  display: block;                   /* Larger click target */
+  color: white;                   /* White link text */
+  text-decoration: none;            /* Remove underline/other decorations from text/links */
+  padding: 14px 16px;               /* Space inside link area */
+  border-radius: 8px;               /* Slightly rounded corners */
 }
 nav a:hover { 
   background: rgba(255,255,255,0.15);   /* Light background on hover */
@@ -139,7 +143,7 @@ nav a:focus-visible {
   outline-offset: 2px;                    /* outline offset for increased accessibility/ keyboard-focus styling */
 }
 .active {
-  background-color: grey;     /* Indicates active page link */
+  background-color: grey;               /* Indicates active page link */
 }
 @media (max-width: 640px) {               /* responsiveness for viewing on mobile */
   nav .container { flex-wrap: wrap; }
@@ -154,70 +158,104 @@ nav a:focus-visible {
   margin: 18px 0;                       /* Vertical spacing */
   box-shadow: var(--shadow);            /* Subtle shadow */
 }
+
+.resume-section {
+  background: var(--surface);           /* Light background for section */
+  border-radius: var(--radius);         /* Rounded corners */
+  padding: calc(var(--spacing) * 1.25); /* Internal spacing */
+  margin: 18px 0;                       /* Vertical spacing */
+  box-shadow: var(--shadow);            /* Subtle shadow */
+  text-align: center;                   /* Centres text */
+}
+
+.figure { 
+  display: inline-block;              /* Makes figure only as wide as its content */
+  text-align: center;                 /* Centres text */
+}
+
 .profile {
-  display: flex;                  /* Enables horizontal flex layout (side-by-side arrangement) */
-  align-items: center;            /* Vertically centres items along the cross-axis */
-  gap: 20px;                      /* Adds 20px of space between text and image */
+  display: flex;                      /* Enables horizontal flex layout (side-by-side arrangement) */
+  align-items: center;                /* Vertically centres items along the cross-axis */
+  gap: 20px;                          /* Adds 20px of space between text and image */
 }
 .profile-text {
-  flex: 1;                        /* Allows the text section to grow and fill available space */
+  flex: 2;                            /* Allows the text section to grow and fill available space */
 }
 .profile-photo {
-  display: block;                 /* Makes the image behave like a block element (so margin works) */
-  margin-left: auto;              /* Centres the image horizontally */
-  margin-right: auto;             /* Centres the image horizontally */
-  width: 20%;                     /* Limits the image width to 35% of its container */
-  border-radius: 8px;             /* Rounds the corners of the image slightly */
+  display: block;                     /* Makes the image behave like a block element (so margin works) */
+  margin-left: auto;                  /* Centres the image horizontally */
+  margin-right: auto;                 /* Centres the image horizontally */
+  width: 40%;                         /* Limits the image width to 50% of its container */
+  border-radius: 8px;                 /* Rounds the corners of the image slightly */
 }
+
+.home {
+  display: flex;                      /* Enables horizontal flex layout (side-by-side arrangement) */
+  align-items: center;                /* Vertically centres items along the cross-axis */
+  gap: 20px;                          /* Adds 20px of space between text and image */
+}
+.home-text {
+  flex: 2;                            /* Allows the text section to grow and fill available space */
+}
+.home-photo {
+  display: block;                     /* Makes the image behave like a block element (so margin works) */
+  margin-left: auto;                  /* Centres the image horizontally */
+  margin-right: auto;                 /* Centres the image horizontally */
+  width: 40%;                         /* Limits the image width to 40% of its container */
+}
+
 .main-photo { 
-  max-width: 250px;       /* resizes maximum width of these images within the sections */
-  width: 100%;            /* keeps proportions and maintains responsiveness */
-  height: auto;           /* Maintains aspect ratio */
-  padding-bottom: 25px;   /* Space below image so text isn’t too close */
+  display: block;                     /* Makes the image behave like a block element (so margin works) */
+  margin-left: auto;                  /* Centres the image horizontally */
+  margin-right: auto;                 /* Centres the image horizontally */
+  max-width: 1500px;                  /* resizes maximum width of these images within the sections */
+  width: 100%;                        /* Keeps proportions and maintains responsiveness */
+  height: auto;                       /* Maintains aspect ratio */
+  padding-bottom: 25px;               /* Space below image so text isn’t too close */
 }
+
 .infographic, .sample-photo { 
-  max-width: 560px;       /* resizes maximum width of these images within the sections */
-  width: 100%;            /* keeps proportions and maintains responsiveness */
-  height: auto;           /* Maintains aspect ratio */
-  padding-bottom: 25px;   /* Space below image so text isn’t too close */
+  max-width: 100px;                   /* resizes maximum width of these images within the sections */
+  width: 100%;                        /* keeps proportions and maintains responsiveness */
+  height: auto;                       /* Maintains aspect ratio */
+  padding-bottom: 25px;               /* Space below image so text isn’t too close */
 }
 .embed-video {
   padding-bottom: 25px;
 }
 table {
-  width: 100%;                /* Table spans full width */
-  border-collapse: collapse;  /* Removes double borders */
-  margin-top: 10px;           /* Space above table */
+  width: 100%;                        /* Table spans full width */
+  border-collapse: collapse;          /* Removes double borders */
+  margin-top: 10px;                   /* Space above table */
   font-family: Arial, sans-serif;     /* Table font */
 }
 th, td {
-  border: 1px solid #ccc;   /* Light grey cell borders */
-  padding: 10px 12px;         /* Space inside cells */
-  text-align: left;           /* Aligns text to the left */
+  border: 1px solid #000000;        /* Black cell borders */
+  padding: 10px 12px;                 /* Space inside cells */
+  text-align: left;                   /* Aligns text to the left */
 }
 thead {
-  background-color: #f0f0f0; /* Light grey header background */
+  background-color: #355b3c;        /* Dark green header background */
 }
 th {
-  color: #333;              /* Dark grey header text */
-  font-weight: bold;          /* Bold header text */
+  color: #ffffff;                    /* White header text */
+  font-weight: bold;                   /* Bold header text */
 }
 tr:nth-child(even) {
-  background-color: #fafafa;  /* Zebra stripe effect for even rows */
+  background-color: #d7d9d7;         /* Zebra stripe effect for even rows */
 }
 .flex-container {
-  display: flex;                    /* Horizontal flex layout */
-  flex-wrap: wrap;                  /* Wraps to next line if needed */
-  gap: 20px;                        /* Space between items */
-  justify-content: space-between;   /* Space between items */
-  margin-top: 20px;                 /* Space above container */
+  display: flex;                      /* Horizontal flex layout */
+  flex-wrap: wrap;                    /* Wraps to next line if needed */
+  gap: 20px;                          /* Space between items */
+  justify-content: space-between;     /* Space between items */
+  margin-top: 20px;                   /* Space above container */
 }
 .project-card {
-  flex: 1 1 350px;                /* Responsive card width */
-  background-color: #f9f9f9;    /* Light grey background */
-  border: 1px solid #ddd;       /* Light border */
-  padding: 15px;                  /* Space inside card */
-  border-radius: 8px;             /* Rounded corners */
+  flex: 1 1 350px;                                /* Responsive card width */
+  background-color: #eeeeee;                    /* Light grey background */
+  padding: 15px;                                  /* Space inside card */
+  border-radius: var(--radius);                   /* Rounded corners */
   box-shadow: 1px 2px 4px rgba(0,0,0,0.1);      /* Soft shadow */
 }
 .project-card img {
@@ -228,13 +266,13 @@ tr:nth-child(even) {
 .project-card h3 {
   margin-top: 10px;     /* Space above heading */
   font-size: 1.1rem;    /* Slightly larger heading text */
-  color: #2c3e50;     /* Dark grey-blue colour */
+  color: #355b3c;     /* Dark green colour */
 }
 
 /* ---------- 8) Cards / Gallery ------------- */
 .card-grid {
   display: grid;                                                  /* Grid layout */
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));    /* Responsive columns */
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));    /* Responsive columns */
   gap: var(--spacing);                                            /* Space between grid items */
 }
 .card {
@@ -246,18 +284,18 @@ tr:nth-child(even) {
   flex-direction: column;         /* Stacks content vertically */
 }
 .card img { 
-  width: 100%;                  /* Image fills card */
+  width: 100%;                    /* Image fills card */
 }
 .card .content { 
-  padding: var(--spacing);      /* Space around content */
+  padding: var(--spacing);        /* Space around content */
 }
 .card h3 { 
-  margin-top: 0.4em;        /* Space above heading */
-  margin-bottom: 0.3em;     /* Space below heading */
+  margin-top: 0.4em;              /* Space above heading */
+  margin-bottom: 0.3em;           /* Space below heading */
 }
 .card p { 
-  color: var(--muted);      /* Muted text colour */
-  margin-bottom: 0.8em;     /* Space below paragraph */
+  color: var(--muted);            /* Muted text colour */
+  margin-bottom: 0.8em;           /* Space below paragraph */
 }
 .card a { display: block; }
 .card:hover { transform: translateY(-2px); transition: transform .15s ease; }
@@ -265,18 +303,18 @@ tr:nth-child(even) {
 
 /* ---------- 9) Forms ----------------------- */
 form {
-  display: grid;    /* Grid layout for form elements */
-  gap: 12px;        /* Space between form items */
+  display: grid;                  /* Grid layout for form elements */
+  gap: 12px;                      /* Space between form items */
 }
 label {
-  font-weight: 600;     /* Semi-bold labels */
+  font-weight: 600;               /* Semi-bold labels */
 }
 input[type="text"], input[type="email"], textarea {
-  width: 100%;                    /* Full width fields */
-  padding: 10px 12px;             /* Internal spacing */
-  border: 1px solid #d4d7dd;    /* Light border */
-  border-radius: 10px;            /* Rounded corners */
-  background: #fff;             /* White background */
+  width: 100%;                                        /* Full width fields */
+  padding: 10px 12px;                                 /* Internal spacing */
+  border: 1px solid #d4d7dd;                        /* Light border */
+  border-radius: 10px;                                /* Rounded corners */
+  background: #fff;                                 /* White background */
   transition: border-color 0.2s, box-shadow 0.2s;     /* Smooth focus effect */
 }
 input:focus, textarea:focus {
@@ -285,8 +323,8 @@ input:focus, textarea:focus {
   box-shadow: 0 0 0 3px rgba(28,76,150,0.15);   /* Glow on focus */
 }
 textarea { 
-  min-height: 140px;        /* Minimum height */
-  resize: vertical;         /* Only resize vertically */
+  min-height: 140px;          /* Minimum height */
+  resize: vertical;           /* Only resize vertically */
 }
 button, input[type="submit"] {
   background: var(--brand);   /* Brand colour */
@@ -314,7 +352,7 @@ footer {
   color: #cfd7ff;          /* Light text colour */
 }
 footer p {
-  color: white;     /* White paragraph text */
+  color: white;            /* White paragraph text */
 }
 footer .container {
   width: min(100% - 2*var(--spacing), var(--maxw));       /* Responsive width */
@@ -326,10 +364,10 @@ footer .container {
 }
 
 /* ---------- 11) Utilities ------------------ */
-.text-center {            /* Utility class: centers text */
+.text-center {                  /* Utility class: centers text */
   text-align: center;           /* Centers text horizontally */
 }
-.img-center {             /* Utility class: centers an image and scales it */
+.img-center {                   /* Utility class: centers an image and scales it */
   display: block;               /* Make the image a block element so margins can take effect */
   margin-left: auto;            /* Auto left margin helps center horizontally */
   margin-right: auto;           /* Auto right margin completes horizontal centering */
