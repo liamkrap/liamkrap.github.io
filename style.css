@@ -212,7 +212,6 @@ body {
 .content-section {
     background-color: white;
     padding: 50px;
-    max-width: 900px;
     margin: 0 auto;
 }
 
@@ -267,54 +266,126 @@ body {
     margin-bottom: 8px;
 }
 
-/* Contact form styling */
-.form-section {
-    background-color: #d1d6c5;           /* Light background for section */
-    border-radius: 12px;         /* Rounded corners */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);            /* Subtle shadow */
+/* Contact page intro section */
+.contact-intro {
+    background-color: white;
+    padding: 30px 50px;
+    text-align: center;
+}
+
+.contact-intro p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Contact form container with background */
+.contact-form-container {
+    background-color: #D2D6C6;
     padding: 50px;
+    margin: 0 auto;
+    max-width: 800px;
+    border-radius: 15px;
+}
+
+/* New contact form styling */
+.contact-form-new {
     max-width: 900px;
     margin: 0 auto;
 }
 
-.contact-form {
-    margin: 30px 0;
-    max-width: 600px;
+/* Form row for two-column layout */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 20px;
 }
 
 /* Form labels */
-.contact-form label {
+.form-group label {
     display: block;
-    margin-top: 15px;
-    margin-bottom: 5px;
     font-weight: bold;
+    margin-bottom: 8px;
+    color: #000;
+    font-size: 16px;
 }
 
 /* Form input fields */
-.contact-form input,
-.contact-form textarea {
+.contact-form-new input[type="text"],
+.contact-form-new input[type="email"],
+.contact-form-new textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 5px;
     font-family: Arial, sans-serif;
+    font-size: 15px;
+    background-color: white;
 }
 
-/* Submit button */
-.submit-button {
+/* Textarea specific styling */
+.contact-form-new textarea {
+    resize: vertical;
+}
+
+/* Form bottom section with checkboxes and button */
+.form-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+}
+
+.form-bottom .form-group {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+/* Checkbox group styling */
+.checkbox-group {
+    display: flex;
+    gap: 30px;
+}
+
+/* Checkbox label styling */
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: normal !important;
+    cursor: pointer;
+    color: #000;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* Send button */
+.send-button {
     background-color: #3d3d3b;
     color: white;
-    padding: 12px 30px;
+    padding: 15px 50px;
     border: none;
     border-radius: 5px;
-    margin-top: 15px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: bold;
     transition: background-color 0.3s;
+    white-space: nowrap;
 }
 
-/* Hover effect for submit button */
-.submit-button:hover {
+/* Hover effect for send button */
+.send-button:hover {
     background-color: #5a5a58;
 }
 
@@ -330,6 +401,17 @@ body {
 .about-content h3 {
     margin-top: 0;
     margin-bottom: 0;
+}
+
+.about-image {
+    flex: 0 0 500px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 30px;
 }
 
 /* Tool Proficiency heading to match table header */
@@ -752,16 +834,30 @@ body {
     .resume-container {
         padding: 20px;
     }
+
+    /* Contact form adjustments for mobile */
+    .contact-form-container {
+        padding: 20px;
+    }
     
-}
-
-.resume-section {
-  margin: 18px 0;                       /* Vertical spacing */
-  text-align: center;                   /* Centres text */
-}
-
-.figure { 
-  display: inline-block;              /* Makes figure only as wide as its content */
-  text-align: center;                 /* Centres text */
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .form-bottom {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .checkbox-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .send-button {
+        width: 100%;
+    }
+    
 }
 

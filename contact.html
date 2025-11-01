@@ -47,44 +47,73 @@
     </div>
 
     <!-- Main content area -->
-    <main>
-        <div class="page-header">
-            <h1>CONTACT ME</h1>
-        </div>
+    <div class="main-content">
+      <!-- Page heading -->
+      <div class="page-header">
+        <h1>CONTACT ME</h1>
+      </div>
 
-        <!-- Content section -->
-        <div class="content-section">
-            <h3>Get In Touch</h3>
-            <p>
-            I would love to hear from you! Whether you have questions about my teaching practice,
-            want to discuss potential opportunities, or just want to connect, please feel free to reach out.
-            </p>
+        <!-- Contact intro section -->
+      <div class="contact-intro">
+        <p>
+            If you would like to get in contact with me please fill out the form below, ensuring you select your reason for contact.
+        </p>
+        <p>
+            Expect a reply within 1 business day.
+        </p>
+      </div>
         
-        <section class="form-section">
+        <!-- Contact form container -->
+      <div class="contact-form-container">
+        <!-- Contact form -->
+        <form class="contact-form-new">
+          <!-- Name and Email in two columns -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullname">Full Name</label>
+              <input type="text" id="fullname" name="fullname" placeholder="John Smith" required>
+            </div>
 
-            <!-- Simple contact form -->
-            <form class="contact-form">
-            <!-- Name input field -->
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="name@email.com" required>
+            </div>
+          </div>
 
-            <!-- Email input field -->
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+          <!-- Message field (full width) -->
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="How can I help?" required></textarea>
+          </div>
 
-            <!-- Message text area -->
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+          <!-- Reason for contact checkboxes and submit button -->
+          <div class="form-bottom">
+            <div class="form-group">
+              <label>Reason for Contact</label>
+              <div class="checkbox-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="reason" value="collaborating">
+                  Interested in Collaborating
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="reason" value="availability">
+                  Availability for Work
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="reason" value="other">
+                  Other
+                </label>
+              </div>
+            </div>
 
             <!-- Submit button -->
-            <button type="submit" class="submit-button">Send Message</button>
-            </form>
-
+            <button type="submit" class="send-button">Send</button>
+          </div>
+        </form>
         </div>
-        </section>
-    </main>
-
+    </div>
   </div>
+  
   <!-- Link to the JavaScript file for sidebar toggle functionality -->
   <script src="script.js"></script>
 </body>
