@@ -396,6 +396,42 @@ body {
     background-color: #f0f0f0;
 }
 
+/* Projects grid styling */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 50px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Individual project item */
+.project-item {
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Project image styling */
+.project-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Hover effect on project items */
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* When sidebar is collapsed, show 3 columns */
+.main-content.expanded .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
     .sidebar {
@@ -419,6 +455,12 @@ body {
     
     .table-column {
         flex: 1;
+    }
+
+    /* Single column on mobile for projects */
+    .projects-grid,
+    .main-content.expanded .projects-grid {
+        grid-template-columns: 1fr;
     }
 }
 
