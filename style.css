@@ -121,6 +121,52 @@ body {
     margin-left: 270px;
     flex-grow: 1;
     padding: 0;
+    transition: margin-left 0.3s ease;
+}
+
+/* When sidebar is collapsed, content expands to full width */
+.main-content.expanded {
+    margin-left: 0;
+}
+
+/* Menu toggle button (hamburger icon) */
+.menu-toggle {
+    position: fixed;
+    top: 20px;
+    left: 280px;
+    background-color: #3d3d3b;
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: left 0.3s ease, background-color 0.3s;
+}
+
+/* When sidebar is collapsed, move button to the left edge */
+.menu-toggle.collapsed {
+    left: 10px;
+}
+
+/* Hover effect for toggle button */
+.menu-toggle:hover {
+    background-color: #5a5a58;
+}
+
+/* When sidebar is collapsed, hide it off screen */
+.sidebar.collapsed {
+    transform: translateX(-100%);
+}
+
+/* Add smooth animation when sidebar opens/closes */
+.sidebar {
+    transition: transform 0.3s ease;
 }
 
 /* Hero section on homepage */
