@@ -665,6 +665,48 @@ body {
     display: block;
 }
 
+/* Resume page specific styles */
+.resume-container {
+    padding: 40px 50px;
+    background-color: white;
+    text-align: center;
+}
+
+/* Figure element for resume */
+.figure {
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+/* Caption above the resume image */
+.figure figcaption {
+    font-size: 18px;
+    font-style: italic;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Link styling for resume download */
+.figure a {
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Resume image styling */
+.figure img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+/* Hover effect on resume image */
+.figure a:hover img {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
     .sidebar {
@@ -704,6 +746,11 @@ body {
     .teaching-image {
         flex: 1;
         width: 100%;
+    }
+
+    /* Resume container padding on mobile */
+    .resume-container {
+        padding: 20px;
     }
     
 }
