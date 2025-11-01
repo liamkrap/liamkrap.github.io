@@ -318,6 +318,84 @@ body {
     background-color: #5a5a58;
 }
 
+/* About content specific styling */
+.about-content {
+    padding: 40px 50px;
+}
+
+.about-content p {
+    margin-bottom: 25px;
+}
+
+.about-content h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Tool Proficiency heading to match table header */
+.table-column h3 {
+    background-color: #3b3d31;
+    color: white;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+/* Two-column layout for text and table */
+.two-column-layout {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* Left column with text - takes up more space */
+.text-column {
+    flex: 1;
+}
+
+/* Right column with table - fixed width */
+.table-column {
+    flex: 0 0 450px;
+}
+
+/* Tool Proficiency Table */
+.proficiency-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0;
+}
+
+/* Table header styling */
+.proficiency-table thead {
+    background-color: #f5f5f5;
+}
+
+.proficiency-table th {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+    border-top: none;
+    font-weight: bold;
+}
+
+/* Table cell styling */
+.proficiency-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+/* Alternating row colors for better readability */
+.proficiency-table tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+/* Hover effect on table rows */
+.proficiency-table tbody tr:hover {
+    background-color: #f0f0f0;
+}
+
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
     .sidebar {
@@ -332,6 +410,15 @@ body {
     
     .container {
         flex-direction: column;
+    }
+
+    /* Stack columns vertically on mobile */
+    .two-column-layout {
+        flex-direction: column;
+    }
+    
+    .table-column {
+        flex: 1;
     }
 }
 
