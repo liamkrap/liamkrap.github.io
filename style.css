@@ -11,10 +11,6 @@ body {
     background-color: #ffffff;
 }
 
-:root {
-    --shadow: 0 6px 24px rgba(0,0,0,0.08);    /* Subtle shadow for depth */
-}
-
 /* Main container holds sidebar and content side by side */
 .container {
     display: flex;
@@ -24,7 +20,7 @@ body {
 /* Sidebar styling - dark background on the left */
 .sidebar {
     width: 270px;
-    background-color: #3d3d3b;
+    background-color: #3b3d31;
     color: white;
     padding: 30px 20px;
     display: flex;
@@ -85,7 +81,7 @@ body {
 
 /* Active page styling */
 .nav-item.active {
-    background-color: #5a5a58;
+    background-color: #1C1E1F;
 }
 
 /* Social media icons at bottom of sidebar */
@@ -112,7 +108,7 @@ body {
 }
 
 /* Hover effect for social links */
-.social-link:hover {
+.social-link.hover {
     background-color: #5a5a58;
 }
 
@@ -134,7 +130,7 @@ body {
     position: fixed;
     top: 20px;
     left: 280px;
-    background-color: #3d3d3b;
+    background-color: #3b3d31;
     color: white;
     border: none;
     width: 50px;
@@ -931,4 +927,3 @@ body {
     }
     
 }
-
